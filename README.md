@@ -1,2 +1,2 @@
 # spotify-charts
-Download a bunch of data about the most-streamed songs on Spotify by day
+Download data from spotifycharts.com about the most-streamed songs on Spotify by day
