@@ -16,11 +16,11 @@ for index, row in df.iterrows():
     file = requests.get(row['url'])
     open(row['date'] + '.csv', 'wb').write(file.content)
 
-# In order to delete an unnecessary row in every CSV, and the header row in each CSV file, create a list of the CSV files you just downloaded by matching any file ending in .csv
+# In order to delete an unnecessary row in every CSV, create a list of the CSV files you just downloaded by matching any file ending in .csv
 csv_files = glob.glob('*.csv')
 for file in csv_files:
     lines = open(file).readlines()
-    open(file, 'w').writelines(lines[2:])
+    open(file, 'w').writelines(lines[1:])
 
 # Combine all files in the csv_files glob into a single dataframe, while also appending the file name as a column so you know which date the data corresponds to
 combined_csv = []
