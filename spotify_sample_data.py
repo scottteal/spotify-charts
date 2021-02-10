@@ -1,6 +1,4 @@
 import requests
-from bs4 import BeautifulSoup as bs
-from urllib.request import urlopen
 import csv
 import pandas as pd
 import glob
